@@ -9,6 +9,7 @@
 
 <script>
 import { ref } from '@vue/reactivity'
+import useCounter from '@/composables/useCounter'
 
 export default {
   name: 'Counter',
@@ -16,21 +17,10 @@ export default {
   emits: [],
   setup() {
 
-    const counter = ref(5)
-
-    // const increase = () => {
-    //   counter.value++
-    // }
-
-    // const decrease = () => {
-    //   counter.value--
-    // }
+    const { counter, decrease, increase } = useCounter( 25 )
 
     return {
-      counter,
-
-      decrease: () => counter.value--,
-      increase: () => counter.value++
+      counter, decrease, increase
     }
   }
 }
