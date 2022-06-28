@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
 import useCounter from '@/composables/useCounter'
 
 export default {
