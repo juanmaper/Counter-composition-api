@@ -23,9 +23,9 @@ export default createStore({
     getTodosByTab: ( _ , getters ) => ( tab ) => {
 
       switch (tab) {
-        case 'all': getters.allTodos
-        case 'pending': getters.pendingTodos
-        case 'completed': getters.completedTodos
+        case 'all': return getters.allTodos
+        case 'pending': return getters.pendingTodos
+        case 'completed': return getters.completedTodos
       }
     } 
   },
