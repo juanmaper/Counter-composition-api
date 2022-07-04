@@ -37,27 +37,24 @@
 </template>
 
 <script>
-import { computed, ref } from '@vue/runtime-core'
-import { useStore } from 'vuex'
+import '../composables/useTodo'
+import useTodo from '../composables/useTodo'
 
 export default {
   setup() {
 
-    const store = useStore()
+    const {
+      currentTab,
+      pending,
+      getTodosByTab,
+      toggleTodo
+    } = useTodo()
 
-    const currentTab = ref('all')
-  
     return {
       currentTab,
-
-      all: computed(() => store.getters['allTodos']),
-      completed: computed(() => store.getters['completedTodos']),
-      pending: computed(() => store.getters['pendingTodos']),
-
-      getTodosByTab: computed( () => store.getters['getTodosByTab']( currentTab.value )),
-
-      //Methods
-      toggleTodo: ( id ) => store.commit('toggleTodo', id ),
+      pending,
+      getTodosByTab,
+      toggleTodo
     }
 
   }
