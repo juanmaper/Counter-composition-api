@@ -18,6 +18,10 @@
       <h2>Modal title</h2>
     </template>
 
+    <template v-slot:exposed="{ newTitle }">
+      <h2>{{ newTitle }}</h2>
+    </template>
+
   </modal>
 </template>
 
