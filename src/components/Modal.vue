@@ -3,7 +3,15 @@
 
     <div class="modal-container">
 
-      <slot />
+      <slot name="header" />
+      <slot name="body" />
+      <slot name="footer" />
+<!-- 
+      <slot>
+        <div class="center">
+          This will appear if there is no content
+        </div>  
+      </slot> -->
 
     </div>
 

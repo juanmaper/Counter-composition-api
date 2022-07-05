@@ -2,10 +2,20 @@
   <h1>Learning Slots</h1>
   <button>Open Modal</button>
 
-  <modal> 
-    <h2>Modal title</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa dignissimos vol</p>
-    <button>Exit</button>
+  <modal title="Hello World"> 
+
+    <template v-slot:body>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa dignissimos vol</p>
+    </template>
+
+    <template v-slot:footer>
+      <button>Exit</button>
+    </template>
+
+    <template v-slot:header>
+      <h2>Modal title</h2>
+    </template>
+
   </modal>
 </template>
 
