@@ -6,9 +6,12 @@
 
       <slot name="header" />
       <slot name="body" />
+      <slot name="form"></slot>
       <slot name="footer" />
 
       <slot name="exposed" :newTitle="newTitle"></slot>
+
+      
 <!-- 
       <slot>
         <div class="center">
